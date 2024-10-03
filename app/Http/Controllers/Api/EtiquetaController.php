@@ -12,7 +12,7 @@ use App\Models\Etiqueta;
 class EtiquetaController extends Controller
 {
     public function index(){
-        return EtiquetaResource::collection(Etiqueta::with('recetas')->get());
+        return EtiquetaResource::collection(Etiqueta::with('recetas.categorias', 'recetas,etiquetas', 'recetas.user')->get());
     }
 
     public function show(Etiqueta $etiqueta){
