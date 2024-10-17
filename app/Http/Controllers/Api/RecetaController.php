@@ -24,7 +24,12 @@ class RecetaController extends Controller
         $receta = Receta::create($request->all());
         $receta->etiquetas()->attach(json_decode($request->etiquetas));
 
+<<<<<<< HEAD
         return response()->json(new RecetaResource($receta), Response::HTTP_CREATED); // 201 created
+=======
+        return response()->json(new RecetaResource($receta), 
+                                Response::HTTP_CREATED); // 201 Created
+>>>>>>> af90c534c64298ce6eea814c4b5aea13e07f82d3
     }
 
     public function show(Receta $receta){
@@ -39,12 +44,21 @@ class RecetaController extends Controller
             $receta->etiquetas()->sync($etiquetas);
         }
 
+<<<<<<< HEAD
         return response()->json(new RecetaResource($receta), Response::HTTP_ACCEPTED);
+=======
+        return response()->json(new RecetaResource($receta), 
+                                Response::HTTP_ACCEPTED); // 202 Accepted
+>>>>>>> af90c534c64298ce6eea814c4b5aea13e07f82d3
     }
 
     public function destroy(Receta $receta){
         $receta->delete();
+<<<<<<< HEAD
         return response()->json(null, Response::HTTP_NO_CONTENT); //204 No content
+=======
+        return response()->json(null, Response::HTTP_NO_CONTENT); // 204 No Content
+>>>>>>> af90c534c64298ce6eea814c4b5aea13e07f82d3
     }
 
 }

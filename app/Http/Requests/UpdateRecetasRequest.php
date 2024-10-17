@@ -24,10 +24,17 @@ class UpdateRecetasRequest extends FormRequest
         return [
             'categoria_id' => 'required|integer',
             'user_id' => 'required|integer',
+<<<<<<< HEAD
             'titulo' => 'required|String',
             'descripcion' => 'required|String',
             'ingredientes' => 'required|String',
             'instrucciones' => 'required|String',
+=======
+            'titulo' => 'required|string',
+            'descripcion' => 'required|string',
+            'ingredientes' => 'required|string',
+            'instrucciones' => 'required|string',
+>>>>>>> af90c534c64298ce6eea814c4b5aea13e07f82d3
         ];
     }
 }

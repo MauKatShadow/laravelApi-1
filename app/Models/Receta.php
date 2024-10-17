@@ -16,7 +16,11 @@ class Receta extends Model
         'descripcion',
         'ingredientes',
         'instrucciones',
+<<<<<<< HEAD
         'imagen'
+=======
+        'imagen',
+>>>>>>> af90c534c64298ce6eea814c4b5aea13e07f82d3
     ];
 
     public function etiquetas(){
